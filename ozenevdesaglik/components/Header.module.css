@@ -1,0 +1,93 @@
+.navbar {
+  background-color: #3b823e;
+  color: white;
+  padding: 1rem 2rem;
+  height: 130px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-size: 25px;
+  font-weight: 400;
+  backdrop-filter: blur(10px); /* Optional: Blur the background for a frosted effect */
+}
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 50px;
+}
+
+.navLogo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navMenu {
+  display: flex;
+  gap: 1rem;
+  transition: max-height 0.3s ease-out;
+}
+
+.navItem {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.navItem:hover {
+  background-color: #c82519;
+}
+
+.navToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  display: block;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .nav-menu.active {
+    max-height: 200px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
