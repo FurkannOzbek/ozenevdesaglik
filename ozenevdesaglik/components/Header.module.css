@@ -76,18 +76,18 @@
 }
 
 @media (max-width: 768px) {
-  .nav-menu {
+  .navMenu {
     display: flex;
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
   }
 
-  .nav-menu.active {
+  .navMmenu.active {
     max-height: 200px;
   }
 
-  .nav-toggle {
+  .navToggle {
     display: block;
   }
 }

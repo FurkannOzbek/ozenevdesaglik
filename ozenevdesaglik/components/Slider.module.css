@@ -1,36 +1,6 @@
 .sliderContainer {
-  height: calc(80vh - 130px);
   width: 100vw;
-  overflow: hidden;
   position: relative;
-}
-
-.slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transform: translateZ(0); /* Prevents performance issues in some browsers */
-  will-change: transform; /* Optimizes performance */
-  transition: background-image 0.8s ease-in-out;
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 1rem;
-  cursor: pointer;
-  z-index: 2;
-  font-size: 2rem;
-  transform: translateY(-50%);
 }
 
 .textOverlay {
@@ -44,22 +14,22 @@
   padding: 0 20px;
   width: 80%;
   max-width: 800px;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-.textOverlay ul {
-  list-style: none; /* Remove default bullets */
-  margin: 0;
-  padding: 0;
-  text-align: left; /* Align text to the left for readability */
+  z-index: 3; /* Ensure text is always above images */
+  opacity: 1; /* Keep text visible */
 }
 
-.textOverlay li {
-  margin: 0.5rem 0; /* Space between list items */
+.bulletPoints {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.bulletPoints li {
+  margin: 0.5rem 0;
   opacity: 0; /* Initially hidden */
   transform: translateY(-20px); /* Start above the viewport */
-  animation: slideIn 1.5s forwards;
+  animation: slideIn 1s forwards; /* Animation for text slide in */
 }
 
 @keyframes slideIn {
@@ -69,16 +39,50 @@
   }
 }
 
-.textOverlay h1 {
-  margin: 0;
-}
-
 .fadeIn {
-  opacity: 1;
+  animation: fadeIn 0.8s forwards; /* Smooth fade in */
 }
 
 .fadeOut {
-  opacity: 0;
+  animation: fadeOut 0.8s forwards; /* Smooth fade out */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start completely transparent */
+  }
+  40% {
+    opacity: 0.5; /* Gradually increase opacity */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Start fully visible */
+  }
+  60% {
+    opacity: 0.5; /* Gradually decrease opacity */
+  }
+  100% {
+    opacity: 0; /* Fully transparent */
+  }
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 4;
+  font-size: 2rem;
+  transform: translateY(-50%);
 }
 
 .prev {
@@ -92,4 +96,56 @@
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1400px) {
+  .textOverlay {
+    font-size: 1.5rem; /* Smaller font size for medium screens */
+    bottom: 75%;
+    left: 80%;
+    font-size: 30px;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .textOverlay {
+    font-size: 1.5rem; /* Smaller font size for medium screens */
+    bottom: 75%;
+    left: 85%;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.5rem; /* Adjust button size */
+    padding: 0.8rem; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .textOverlay {
+    font-size: 1.5rem; /* Smaller font size for tablets */
+    width: 90%; /* Adjust width */
+    bottom: 80%;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.2rem; /* Adjust button size */
+    padding: 0.6rem; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .textOverlay {
+    font-size: 1rem; /* Even smaller font size for mobile */
+    width: 95%; /* Full width on small devices */
+    bottom: 80%;
+  }
+
+  .prev,
+  .next {
+    font-size: 1rem; /* Smaller buttons on mobile */
+    padding: 0.5rem; /* Adjust button padding */
+  }
 }

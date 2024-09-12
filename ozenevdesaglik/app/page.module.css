@@ -163,3 +163,17 @@ a.secondary {
     filter: invert();
   }
 }
+/* page.module.css */
+.parallax-wrapper {
+  position: relative;
+  overflow: hidden; /* Ensure the content isn't clipped */
+  height: 100vh; /* Adjust height as needed */
+}
+
+.parallax-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px; /* Matches the height you set in JS */
+  color: white; /* Ensures text contrast with the background */
+}
