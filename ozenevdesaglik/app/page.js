@@ -22,10 +22,6 @@ const Home = () => {
         <div style={{ height: "400px" }}></div> {/* Adjust height to fit your design needs */}
       </Parallax>
       <Footer />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat lobortis
-        venenatis...
-      </p>
     </>
   );
 };
