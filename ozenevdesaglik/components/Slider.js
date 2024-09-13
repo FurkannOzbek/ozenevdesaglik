@@ -1,12 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./Slider.module.css";
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 const images = ["/images/slide1.jpg", "/images/slide3.jpg"];
 
 const texts = [
-  [" High-Quality Health Care", "Experienced Professionals", "24/7 Support"],
-  ["Personalized Care Plans", "Compassionate Staff", "Flexible Scheduling"],
+  [
+    "Evde Serum",
+    "Pansuman",
+    "Enjeksiyon",
+    "Evde Doktor Hizmeti",
+    "Sonda değişimi",
+    "Akupunktur",
+    "Hacamat",
+    "Sülük",
+    "Evde Hasta Bakım Hizmeti",
+  ],
+  [
+    "Danışman Doktorlarımız",
+    "Temizlik ve Sterilizasyon Anlayışımız",
+    "7/24 Hizmet",
+    "Ekip Yapımız ve İş Anlayışımız",
+  ],
 ];
 
 export const Slider = () => {
@@ -15,12 +30,18 @@ export const Slider = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [displayedTextIndex, setDisplayedTextIndex] = useState(0); // Manage displayed text
   const [textKey, setTextKey] = useState(0); // Key to force re-render of text animations
+  const parallaxRef = useRef(); // Reference to ParallaxProvider
 
   useEffect(() => {
     if (isTransitioning) {
       const timer = setTimeout(() => {
         setCurrentIndex(nextIndex);
         setIsTransitioning(false);
+
+        // Reinitialize or refresh parallax positions after slide change
+        if (parallaxRef.current) {
+          parallaxRef.current.update(); // Assuming 'update' is a method available to refresh parallax calculations
+        }
       }, 800); // Duration should match CSS for image fade transition
       return () => clearTimeout(timer);
     }
@@ -47,13 +68,13 @@ export const Slider = () => {
   };
 
   return (
-    <ParallaxProvider>
-      <div style={{ minHeight: "200vh" }}>
+    <ParallaxProvider ref={parallaxRef}>
+      <div>
         <div className={styles.sliderContainer}>
           <ParallaxBanner
             style={{
               aspectRatio: "16 / 9",
-              height: "80vh",
+              height: "85vh",
               overflow: "hidden",
               position: "relative",
             }}
@@ -61,7 +82,7 @@ export const Slider = () => {
             {/* Current slide */}
             <ParallaxBannerLayer
               image={images[currentIndex]}
-              speed={-10}
+              speed={-40}
               style={{
                 position: "absolute",
                 top: 0,
@@ -89,8 +110,6 @@ export const Slider = () => {
                 objectFit: "cover",
                 objectPosition: "center",
                 transition: "opacity 0.8s ease-in-out",
-                opacity: isTransitioning ? 1 : 0.99, // Fade in next slide, never fully transparent
-                zIndex: isTransitioning ? 2 : 1, // Ensure next slide is above during transition
               }}
             />
 
@@ -112,9 +131,6 @@ export const Slider = () => {
               &#10095;
             </button>
           </ParallaxBanner>
-        </div>
-        <div style={{ height: "150vh", background: "#f0f0f0" }}>
-          Scroll down to see more content below the slider.
         </div>
       </div>
     </ParallaxProvider>

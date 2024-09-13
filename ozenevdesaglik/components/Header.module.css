@@ -1,44 +1,45 @@
-.navbar {
-  background-color: #3b823e;
-  color: white;
-  padding: 1rem 2rem;
-  height: 130px;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-size: 25px;
-  font-weight: 400;
-  backdrop-filter: blur(10px); /* Optional: Blur the background for a frosted effect */
-}
-
 .navContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Align logo to the left and menu to the right */
   align-items: center;
   height: 100px;
   padding: 50px;
+  background-color: white;
+}
+
+.logo {
+  height: 200px; /* Adjust the size of the logo */
+  margin-right: 20px; /* Space between the logo and the menu */
+  margin-left: 200px;
 }
 
 .navLogo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .navMenu {
   display: flex;
   gap: 1rem;
   transition: max-height 0.3s ease-out;
+  margin-right: 200px;
 }
 
 .navItem {
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out; /* Smooth transition for all effects */
+  border-radius: 0; /* Initial state without rounded corners */
 }
 
 .navItem:hover {
-  background-color: #c82519;
+  background-color: #3b823e;
+  transform: translateY(-5px); /* Lifts the item up slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a shadow underneath */
+  border-radius: 10px; /* Adds rounded corners on hover */
 }
 
 .navToggle {
@@ -51,7 +52,7 @@
 .hamburger {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: black;
   position: relative;
   display: block;
 }
@@ -61,7 +62,7 @@
   content: "";
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: black;
   position: absolute;
   left: 0;
   transition: 0.3s;
@@ -83,7 +84,7 @@
     overflow: hidden;
   }
 
-  .navMmenu.active {
+  .navMenu.active {
     max-height: 200px;
   }
 
