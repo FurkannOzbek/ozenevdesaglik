@@ -82,8 +82,19 @@
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
   }
 
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+    display: block;
+    margin-top: 1.5rem;
+  }
+
   .logo {
-    margin-left: 0; /* Align logo properly on smaller screens */
+    margin-left: -10px; /* Align logo properly on smaller screens */
+    margin-top: -10px;
+    height: 120px;
   }
 
   .navMenu {

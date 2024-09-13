@@ -175,7 +175,8 @@
   .textOverlay {
     font-size: 1rem; /* Even smaller font size for mobile */
     width: 95%; /* Full width on small devices */
-    bottom: 40%;
+    bottom: 60%;
+    left: 80%;
   }
 
   .prev,
