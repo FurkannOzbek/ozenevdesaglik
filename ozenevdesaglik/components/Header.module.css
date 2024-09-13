@@ -1,0 +1,114 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between; /* Align logo to the left and menu to the right */
+  align-items: center;
+  height: 100px;
+  padding: 0 50px; /* Adjust padding for better spacing */
+  background-color: #f8f9fa;
+}
+
+.logo {
+  height: 170px; /* Adjust the size of the logo for better fit */
+  margin-right: 20px; /* Space between the logo and the menu */
+  margin-left: 20px; /* Reduced for smaller screens */
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navMenu {
+  display: flex;
+  gap: 1rem;
+  transition: max-height 0.3s ease-out;
+  margin-right: 20px; /* Adjust for better spacing */
+}
+
+.navItem {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out; /* Smooth transition for all effects */
+  border-radius: 0; /* Initial state without rounded corners */
+}
+
+.navItem:hover {
+  background-color: #3b823e;
+  transform: translateY(-5px); /* Lifts the item up slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a shadow underneath */
+  border-radius: 10px; /* Adds rounded corners on hover */
+}
+
+.navToggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  position: relative;
+  display: block;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 0 20px; /* Reduced padding for smaller screens */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+
+  .logo {
+    margin-left: 0; /* Align logo properly on smaller screens */
+  }
+
+  .navMenu {
+    flex-direction: column;
+    max-height: 0; /* Initially hide the menu */
+    overflow: hidden;
+    width: 100%; /* Full width on smaller screens */
+    background-color: white; /* Same background as the header */
+    position: absolute; /* Position over content */
+    top: 100px; /* Adjust according to header height */
+    left: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .navMenu.active {
+    max-height: 300px; /* Adjust to display the full menu */
+  }
+
+  .navToggle {
+    display: block; /* Show toggle button */
+  }
+
+  .navToggle {
+    position: absolute; /* Position the toggle button */
+    right: 20px; /* Adjust right margin */
+    top: 20px; /* Adjust top margin */
+  }
+}

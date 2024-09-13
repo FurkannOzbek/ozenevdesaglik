@@ -1,0 +1,19 @@
+/* Add this to your CSS file (e.g., page.module.css) */
+.parallax-wrapper {
+  position: relative; /* Ensures the element is positioned correctly */
+  overflow: hidden; /* Prevents content from overflowing */
+  height: 100vh; /* Sets the height to view height */
+}
+
+.parallax-background {
+  background-attachment: scroll; /* Allows background to scroll */
+  background-position: center; /* Centers the background image */
+  background-size: cover; /* Ensures the image covers the container */
+  will-change: transform; /* Optimizes performance for scrolling */
+}
+.parallax-debug {
+  outline: 2px dashed red; /* Helps visualize element boundaries */
+  border: 1px solid blue; /* Adds a border for clarity */
+  height: 600px; /* Matches the height of your parallax section */
+  overflow: visible; /* Ensure content isn't clipped */
+}

@@ -1,0 +1,67 @@
+.servicesContainer {
+  padding: 40px;
+  text-align: center;
+  background-color: white;
+  padding: 10rem;
+}
+
+.servicesContainer h2 {
+  margin-bottom: 4rem;
+  color: black;
+}
+
+.servicesContainer p {
+  color: black;
+  margin-bottom: 4rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.serviceCard {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.serviceIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.serviceCard h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.serviceCard p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesGrid {
+    grid-template-columns: 1fr; /* 1 column for mobile phones */
+  }
+}
