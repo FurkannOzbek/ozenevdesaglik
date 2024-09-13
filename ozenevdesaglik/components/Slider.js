@@ -90,6 +90,7 @@ export const Slider = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                overflow: "hidden",
                 objectPosition: "center",
                 transition: "opacity 0.8s ease-in-out",
                 opacity: isTransitioning ? 0 : 1, // Fade out current slide
@@ -105,6 +106,7 @@ export const Slider = () => {
                 position: "absolute",
                 top: 0,
                 left: 0,
+                overflow: "hidden",
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",

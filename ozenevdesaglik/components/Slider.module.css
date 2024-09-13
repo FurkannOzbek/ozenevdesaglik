@@ -1,7 +1,7 @@
 .sliderContainer {
   width: 100vw;
   position: relative;
-  height: 80vh; /* Match this height with the ParallaxBanner height */
+  height: auto; /* Match this height with the ParallaxBanner height */
   overflow: hidden; /* Prevent overflow issues */
 }
 
