@@ -3,14 +3,14 @@
   justify-content: space-between; /* Align logo to the left and menu to the right */
   align-items: center;
   height: 100px;
-  padding: 50px;
-  background-color: white;
+  padding: 0 50px; /* Adjust padding for better spacing */
+  background-color: #f8f9fa;
 }
 
 .logo {
-  height: 200px; /* Adjust the size of the logo */
+  height: 170px; /* Adjust the size of the logo for better fit */
   margin-right: 20px; /* Space between the logo and the menu */
-  margin-left: 200px;
+  margin-left: 20px; /* Reduced for smaller screens */
 }
 
 .navLogo {
@@ -23,7 +23,7 @@
   display: flex;
   gap: 1rem;
   transition: max-height 0.3s ease-out;
-  margin-right: 200px;
+  margin-right: 20px; /* Adjust for better spacing */
 }
 
 .navItem {
@@ -43,7 +43,7 @@
 }
 
 .navToggle {
-  display: none;
+  display: none; /* Hidden by default */
   background: none;
   border: none;
   cursor: pointer;
@@ -77,18 +77,38 @@
 }
 
 @media (max-width: 768px) {
+  .navContainer {
+    padding: 0 20px; /* Reduced padding for smaller screens */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+
+  .logo {
+    margin-left: 0; /* Align logo properly on smaller screens */
+  }
+
   .navMenu {
-    display: flex;
     flex-direction: column;
-    max-height: 0;
+    max-height: 0; /* Initially hide the menu */
     overflow: hidden;
+    width: 100%; /* Full width on smaller screens */
+    background-color: white; /* Same background as the header */
+    position: absolute; /* Position over content */
+    top: 100px; /* Adjust according to header height */
+    left: 0;
+    transition: max-height 0.3s ease-out;
   }
 
   .navMenu.active {
-    max-height: 200px;
+    max-height: 300px; /* Adjust to display the full menu */
   }
 
   .navToggle {
-    display: block;
+    display: block; /* Show toggle button */
+  }
+
+  .navToggle {
+    position: absolute; /* Position the toggle button */
+    right: 20px; /* Adjust right margin */
+    top: 20px; /* Adjust top margin */
   }
 }

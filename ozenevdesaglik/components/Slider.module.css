@@ -129,7 +129,7 @@
 @media (max-width: 1400px) {
   .textOverlay {
     font-size: 1.5rem; /* Smaller font size for medium screens */
-    bottom: 75%;
+    bottom: 35%;
     left: 80%;
     font-size: 30px;
   }
@@ -139,8 +139,8 @@
 @media (max-width: 1024px) {
   .textOverlay {
     font-size: 1.5rem; /* Smaller font size for medium screens */
-    bottom: 75%;
-    left: 85%;
+    bottom: 40%;
+    left: 90%;
   }
 
   .prev,
@@ -154,7 +154,7 @@
   .textOverlay {
     font-size: 1.5rem; /* Smaller font size for tablets */
     width: 90%; /* Adjust width */
-    bottom: 80%;
+    bottom: 40%;
   }
 
   .prev,
@@ -168,7 +168,7 @@
   .textOverlay {
     font-size: 1rem; /* Even smaller font size for mobile */
     width: 95%; /* Full width on small devices */
-    bottom: 80%;
+    bottom: 40%;
   }
 
   .prev,
