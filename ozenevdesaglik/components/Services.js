@@ -63,7 +63,27 @@ const services = [
   {
     title: "Glutanyon",
     description: "Lorem ipsum",
-    icon: "/icons/glutathione.png",
+    icon: "/icons/radiant.png",
+  },
+  {
+    title: "Sülük Tedavisi",
+    description: "Lorem ipsum",
+    icon: "/icons/leechtherapy.png",
+  },
+  {
+    title: "Hacamat İşlemi",
+    description: "Lorem ipsum",
+    icon: "/icons/cup.png",
+  },
+  {
+    title: "Akupunktur",
+    description: "Lorem ipsum",
+    icon: "/icons/acupuncture.png",
+  },
+  {
+    title: "Evde Hasta Bakım Hizmeti",
+    description: "Lorem ipsum",
+    icon: "/icons/nursinghome.png",
   },
   // Add more services as needed
 ];

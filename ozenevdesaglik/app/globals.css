@@ -3,18 +3,14 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+
   /* Ensure overflow is set to auto */
 
   /* Ensure vertical scrolling is enabled */

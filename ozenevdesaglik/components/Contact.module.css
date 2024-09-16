@@ -1,0 +1,80 @@
+/* ContactSection.module.css */
+.contactSection {
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto;
+  max-width: 800px; /* Limit width for better focus */
+  background-color: #ffffff; /* Light background color */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactTitle {
+  font-size: 2rem; /* Larger font size for the title */
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+.contactInfo {
+  display: flex;
+  gap: 40px; /* Increased gap for a more spacious look */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increased gap between icon and text */
+  padding: 10px 20px; /* Added padding for a button-like feel */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease; /* Smoother and longer transition */
+
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.contactItem:hover {
+  transform: translateY(-8px) scale(1.05); /* Slight lift and scale on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+  background-color: #e9f5e9; /* Subtle color change on hover */
+}
+
+.contactIcon {
+  color: #25d366; /* WhatsApp green */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contactText {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contactText:hover {
+  color: #1e8e3e; /* Slightly darker green on hover */
+}
+
+.whatsappLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #25d366; /* WhatsApp green color */
+  text-decoration: none;
+}
+
+.whatsappLink:hover .contactText {
+  text-decoration: underline; /* Underline text on hover */
+}
+
+.whatsappLink:hover .contactIcon {
+  color: #1e8e3e; /* Darken the icon color on hover */
+}

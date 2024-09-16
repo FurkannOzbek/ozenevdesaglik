@@ -82,9 +82,8 @@ export const Slider = () => {
             {/* Current slide */}
             <ParallaxBannerLayer
               image={images[currentIndex]}
-              speed={-40}
+              speed={-10}
               style={{
-                position: "absolute",
                 top: 0,
                 left: 0,
                 width: "100%",
@@ -101,9 +100,8 @@ export const Slider = () => {
             {/* Next slide for crossfade effect */}
             <ParallaxBannerLayer
               image={images[nextIndex]}
-              speed={-40}
+              speed={-10}
               style={{
-                position: "absolute",
                 top: 0,
                 left: 0,
                 overflow: "hidden",

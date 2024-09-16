@@ -88,7 +88,41 @@
     background-color: black;
     position: relative;
     display: block;
-    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  /* Before and after pseudo-elements to create the lines of the hamburger */
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    top: 8px;
+  }
+
+  /* When the menu is active (clicked), transform the hamburger into an X */
+  .hamburger.open {
+    background-color: transparent; /* Hide the middle line */
+  }
+
+  .hamburger.open::before {
+    transform: rotate(45deg);
+    top: 0; /* Align with the center line */
+  }
+
+  .hamburger.open::after {
+    transform: rotate(-45deg);
+    top: 0; /* Align with the center line */
   }
 
   .logo {
@@ -99,18 +133,14 @@
 
   .navMenu {
     flex-direction: column;
-    max-height: 0; /* Initially hide the menu */
+    max-height: 0; /* Hidden by default */
     overflow: hidden;
-    width: 100%; /* Full width on smaller screens */
-    background-color: white; /* Same background as the header */
-    position: absolute; /* Position over content */
-    top: 100px; /* Adjust according to header height */
-    left: 0;
     transition: max-height 0.3s ease-out;
+    z-index: 999; /* Make sure it's above other content */
   }
 
   .navMenu.active {
-    max-height: 300px; /* Adjust to display the full menu */
+    max-height: 500px; /* Adjust this height based on your content */
   }
 
   .navToggle {
@@ -118,8 +148,13 @@
   }
 
   .navToggle {
-    position: absolute; /* Position the toggle button */
-    right: 20px; /* Adjust right margin */
-    top: 20px; /* Adjust top margin */
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .navMenu.active {
+    /* Changes to show a different state when active */
+    background-color: #970000; /* Just an example, change as needed */
   }
 }

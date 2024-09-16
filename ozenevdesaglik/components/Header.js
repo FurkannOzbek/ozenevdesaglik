@@ -1,10 +1,7 @@
 // components/Navbar.js
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./Header.module.css";
-import logo1 from "../public/images/logo1.png";
-// Import the Image component from Next.js if you want to use it
-// import Image from "next/image";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,22 +10,31 @@ export const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const targetRef = useRef(null);
+
+  const scrollToSection = () => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
-        {/* Add the logo here */}
         <Link href="/" className={styles.navLogo}>
-          {/* Use an <img> tag or the <Image> component from Next.js */}
           <img src="/images/logo1.png" alt="Logo" className={styles.logo} />
         </Link>
-        <div className={`${styles.navMenu} ${isOpen ? "active" : ""}`}>
+        <div className={`${styles.navMenu} ${isOpen ? styles.active : ""}`}>
           <Link href="/" className={styles.navItem}>
             Anasayfa
           </Link>
           <Link href="/about" className={styles.navItem}>
             Hakkımızda
           </Link>
-          <Link href="/services" className={styles.navItem}>
+          <Link href="" onClick={scrollToSection} className={styles.navItem}>
             Hizmetlerimiz
           </Link>
           <Link href="/contact" className={styles.navItem}>
@@ -37,7 +43,7 @@ export const Header = () => {
         </div>
 
         <button className={styles.navToggle} onClick={toggleMenu}>
-          <span className={styles.hamburger}></span>
+          <span className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}></span>
         </button>
       </div>
     </nav>
