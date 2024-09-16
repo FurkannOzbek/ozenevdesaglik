@@ -2,7 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./Slider.module.css";
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
-const images = ["/images/slide22.jpg", "/images/slide3.jpg"];
+const images = [
+  "/images/slide22.jpg",
+  "/images/slide4.jpeg",
+  "/images/slide5.jpeg",
+  "/images/slide6.jpeg",
+  "/images/slide7.jpeg",
+];
 
 const texts = [
   [
@@ -115,12 +121,20 @@ export const Slider = () => {
 
             {/* Text overlay with animation */}
             <div key={textKey} className={styles.textOverlay}>
-              <ul className={styles.bulletPoints}>
-                {texts[displayedTextIndex].map((text, index) => (
-                  <li key={index} style={{ animationDelay: `${index * 0.5}s` }}>
-                    {text}
-                  </li>
-                ))}
+              <ul
+                className={`${styles.bulletPoints} ${
+                  displayedTextIndex === 0 ? styles.textStyle0 : styles.textStyle1
+                }`}
+              >
+                {Array.isArray(texts[displayedTextIndex]) &&
+                  texts[displayedTextIndex].map(
+                    (text, index) =>
+                      text ? ( // Check if the text is defined
+                        <li key={index} style={{ animationDelay: `${index * 0.5}s` }}>
+                          {text}
+                        </li>
+                      ) : null // Render nothing if the text is undefined
+                  )}
               </ul>
             </div>
 

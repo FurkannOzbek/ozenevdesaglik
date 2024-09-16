@@ -176,11 +176,34 @@
     font-size: 1rem; /* Even smaller font size for mobile */
     width: 95%; /* Full width on small devices */
     bottom: 15%;
-    left: 50%;
-    color: white;
+    left: 45%;
+    color: rgb(32, 90, 50);
+    font-weight: 900;
   }
   .bulletPoints li::before {
     display: none;
+  }
+
+  .bulletPoints.textStyle0 li {
+    color: #ffffff; /* Example color for texts[0] */
+    animation: fadeIn 0.5s forwards; /* Add your animation styles */
+    position: relative; /* Required for positioning pseudo-elements */
+    margin: 0.5rem 0;
+    padding-left: 30px; /* Space for the indicator */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Start above the viewport */
+    animation: slideIn 1s forwards; /* Animation for text slide in */
+  }
+
+  .bulletPoints.textStyle1 li {
+    color: rgb(3, 110, 36); /* Example color for texts[1] */
+    animation: fadeIn 0.5s forwards; /* Add your animation styles */
+    font-weight: 800;
+    position: relative; /* Required for positioning pseudo-elements */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Start above the viewport */
+    animation: slideIn 1s forwards; /* Animation for text slide in */
+    margin-left: -10px;
   }
 
   .prev,
