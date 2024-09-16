@@ -51,7 +51,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className={styles.footerBottom}>
-        <p>&copy; 2024 Özen Evde Sağlık Hizmetleri. All rights reserved.</p>
+        <p>&copy; 2024 Mediport Sağlık Hizmetleri. All rights reserved.</p>
       </div>
       {showPopup && (
         <div

@@ -21,7 +21,7 @@ const ParallaxTest = () => {
             style={{
               height: "120%", // Adjust height to control vertical size
               width: "110%", // Adjust width to control horizontal size
-              objectFit: "cover", // Ensures the image scales properly within the container
+
               objectPosition: "center", // Center the image in the container
               position: "absolute", // Proper positioning for parallax movement
               top: 0, // Starts the image at the top of the container

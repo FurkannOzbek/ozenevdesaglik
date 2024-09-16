@@ -79,7 +79,7 @@ export const Slider = () => {
         <div className={styles.sliderContainer}>
           <ParallaxBanner
             style={{
-              aspectRatio: "16 / 9",
+              aspectRatio: "4 / 3",
               height: "85vh",
               overflow: "hidden",
               position: "relative",
@@ -89,17 +89,17 @@ export const Slider = () => {
             <ParallaxBannerLayer
               image={images[currentIndex]}
               speed={-10}
+              className={styles.ParallaxBannerLayer1}
               style={{
                 top: 0,
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
-                overflow: "hidden",
-                objectPosition: "center",
+                objectFit: "contain", // Change to contain to fit images within the container
+                objectPosition: "center top", // Center the image within the view
                 transition: "opacity 0.8s ease-in-out",
-                opacity: isTransitioning ? 0 : 1, // Fade out current slide
-                zIndex: isTransitioning ? 1 : 2, // Ensure current slide is behind during transition
+                opacity: isTransitioning ? 0 : 1,
+                zIndex: isTransitioning ? 1 : 2,
               }}
             />
 
@@ -107,14 +107,14 @@ export const Slider = () => {
             <ParallaxBannerLayer
               image={images[nextIndex]}
               speed={-10}
+              className={styles.ParallaxBannerLayer2}
               style={{
                 top: 0,
                 left: 0,
-                overflow: "hidden",
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
+                objectFit: "contain", // Ensure this matches the other layer
+                objectPosition: "center top",
                 transition: "opacity 0.8s ease-in-out",
               }}
             />
