@@ -80,6 +80,7 @@
   .navContainer {
     padding: 0 20px; /* Reduced padding for smaller screens */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    position: relative;
   }
 
   .hamburger {
@@ -89,6 +90,7 @@
     position: relative;
     display: block;
     transition: all 0.3s ease;
+    margin-top: 30px;
   }
 
   /* Before and after pseudo-elements to create the lines of the hamburger */
@@ -132,11 +134,18 @@
   }
 
   .navMenu {
-    flex-direction: column;
+    position: absolute; /* Position the menu within the header */
+    top: 100%; /* Position the menu directly below the navContainer */
+    left: 0; /* Align the menu to the left edge of the container */
+    width: 100%; /* Make the menu take the full width of the container */
     max-height: 0; /* Hidden by default */
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     transition: max-height 0.3s ease-out;
-    z-index: 999; /* Make sure it's above other content */
+    background-color: #f8f9fa; /* Same background color as header */
+    z-index: 10; /* Ensures menu stays above other content */
   }
 
   .navMenu.active {
@@ -152,9 +161,5 @@
     position: absolute;
     right: 20px;
     top: 20px;
-  }
-  .navMenu.active {
-    /* Changes to show a different state when active */
-    background-color: #970000; /* Just an example, change as needed */
   }
 }

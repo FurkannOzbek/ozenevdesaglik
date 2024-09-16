@@ -22,67 +22,80 @@ const services = [
   },
   {
     title: "İğne (Enjeksiyon)",
-    description: "Lorem ipsum",
+    description:
+      "Evinizin konforunda, uzman sağlık personelimiz tarafından güvenli ve hijyenik şartlarda enjeksiyon hizmeti sunuyoruz.",
     icon: "/icons/vaccine.png",
   },
   {
     title: "EKG",
-    description: "Lorem ipsum",
+    description:
+      "Taşınabilir EKG cihazlarımızla, uzman ekibimiz kalp ritmi ölçüm ve değerlendirme hizmeti sunarak sizi güvende tutuyoruz.",
     icon: "/icons/ekg.png",
   },
   {
     title: "Kan Tahlili",
-    description: "Lorem ipsum",
+    description:
+      "Evde kan alımı hizmetimiz ile sağlık kontrolleriniz için gereken tahlilleri konforlu bir şekilde yapıyoruz.",
     icon: "/icons/bloodtest.png",
   },
   {
     title: "Sonda Takma/Çıkartma",
-    description: "Lorem ipsum",
+    description:
+      "Evinizde rahat ve steril bir ortamda, uzman sağlık ekibimiz tarafından sonda takma ve çıkartma işlemleri güvenle yapılmaktadır. Konforunuzu ve sağlığınızı ön planda tutuyoruz.",
     icon: "/icons/catherization.png",
   },
   {
     title: "NG Takma/Çıkartma",
-    description: "Lorem ipsum",
+    description:
+      "Evinizde uzman sağlık ekibimiz tarafından nazogastrik sonda takma ve çıkartma işlemleri güvenli ve hijyenik koşullarda gerçekleştirilmektedir. Beslenme ve tedavi süreçlerinizde konforunuzu sağlamak için yanınızdayız.",
     icon: "/icons/tube.png",
   },
   {
     title: "Peg Bakımı",
-    description: "Lorem ipsum",
+    description:
+      "Uzman ekibimiz, evinizde PEG tüpü bakımını hijyenik ve güvenli şekilde yapmaktadır. Beslenme sürecinizde sağlığınızı korumanız için yanınızdayız.",
     icon: "/icons/endoscopy.png",
   },
   {
     title: "Yatak yarası ve Pansuman",
-    description: "Lorem ipsum",
+    description:
+      "Yatak yaralarınızın bakımı ve pansumanı, evinizde uzman ekibimiz tarafından steril koşullarda yapılmaktadır. İyileşme sürecinizi desteklemek için yanınızdayız.",
     icon: "/icons/medicaldressing.png",
   },
   {
     title: "Dikiş Atma/Alma",
-    description: "Lorem ipsum",
+    description:
+      "Evinizde uzman sağlık personelimiz tarafından dikiş atma ve alma işlemleri güvenli ve steril bir şekilde yapılmaktadır. Yara bakımınızı konforlu bir ortamda sağlıyoruz.",
     icon: "/icons/stitches.png",
   },
   {
     title: "Glutanyon",
-    description: "Lorem ipsum",
+    description:
+      " Evinizde, bağışıklığınızı güçlendirmek ve vücut direncinizi artırmak için glutatyon tedavisi sunuyoruz. Uzman ekibimiz, işlemi güvenli ve hijyenik koşullarda gerçekleştiriyor.",
     icon: "/icons/radiant.png",
   },
   {
     title: "Sülük Tedavisi",
-    description: "Lorem ipsum",
+    description:
+      "Uzman sağlık ekibimiz tarafından evinizde, hijyenik koşullarda sülük tedavisi hizmeti sunuyoruz. Doğal yöntemlerle sağlığınızı desteklemek için yanınızdayız.",
     icon: "/icons/leechtherapy.png",
   },
   {
     title: "Hacamat İşlemi",
-    description: "Lorem ipsum",
+    description:
+      "Evinizin konforunda, uzman ekibimiz tarafından hijyenik koşullarda hacamat işlemi sunuyoruz. Geleneksel yöntemler ile de sağlığınızı desteklemek için yanınızdayız.",
     icon: "/icons/cup.png",
   },
   {
     title: "Akupunktur",
-    description: "Lorem ipsum",
+    description:
+      "Evinizde, uzmanlarımız tarafından güvenli ve steril koşullarda akupunktur tedavisi sunuyoruz. Doğal yöntemlerle vücut dengenizi sağlamak için yanınızdayız.",
     icon: "/icons/acupuncture.png",
   },
   {
     title: "Evde Hasta Bakım Hizmeti",
-    description: "Lorem ipsum",
+    description:
+      "Uzman sağlık ekibimiz, evinizde ihtiyacınıza uygun hasta bakım hizmetleri sunmaktadır. Konforlu bir ortamda, sağlığınız için kesintisiz destek sağlıyoruz.",
     icon: "/icons/nursinghome.png",
   },
   // Add more services as needed

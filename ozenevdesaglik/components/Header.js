@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { useState, useRef } from "react";
 import styles from "./Header.module.css";
+import logo1 from "../public/images/logo1.png"; // Ensure the path to your image is correct
+// Uncomment if needed: import Image from "next/image";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +11,9 @@ export const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
   const targetRef = useRef(null);
 
   const scrollToSection = () => {
@@ -19,6 +23,7 @@ export const Header = () => {
         block: "start",
       });
     }
+    closeMenu(); // Close the menu after scrolling
   };
 
   return (
@@ -28,16 +33,16 @@ export const Header = () => {
           <img src="/images/logo1.png" alt="Logo" className={styles.logo} />
         </Link>
         <div className={`${styles.navMenu} ${isOpen ? styles.active : ""}`}>
-          <Link href="/" className={styles.navItem}>
+          <Link href="/" className={styles.navItem} onClick={closeMenu}>
             Anasayfa
           </Link>
-          <Link href="/about" className={styles.navItem}>
+          <Link href="/hakkimizda" className={styles.navItem} onClick={closeMenu}>
             Hakkımızda
           </Link>
-          <Link href="" onClick={scrollToSection} className={styles.navItem}>
+          <Link href="/#hizmetlerimiz" className={styles.navItem} onClick={closeMenu}>
             Hizmetlerimiz
           </Link>
-          <Link href="/contact" className={styles.navItem}>
+          <Link href="/#iletisim" className={styles.navItem} onClick={closeMenu}>
             İletişim
           </Link>
         </div>
