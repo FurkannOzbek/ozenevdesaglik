@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./Slider.module.css";
 import { ParallaxProvider, ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
-const images = ["/images/slide1.jpg", "/images/slide3.jpg"];
+const images = ["/images/slide22.jpg", "/images/slide3.jpg"];
 
 const texts = [
   [

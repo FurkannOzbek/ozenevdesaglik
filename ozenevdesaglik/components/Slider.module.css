@@ -175,8 +175,12 @@
   .textOverlay {
     font-size: 1rem; /* Even smaller font size for mobile */
     width: 95%; /* Full width on small devices */
-    bottom: 50%;
-    left: 80%;
+    bottom: 15%;
+    left: 50%;
+    color: white;
+  }
+  .bulletPoints li::before {
+    display: none;
   }
 
   .prev,

@@ -30,7 +30,7 @@ export const Header = () => {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.navLogo}>
-          <img src="/images/logo2.png" alt="Logo" className={styles.logo} />
+          <img src="/images/logo3.png" alt="Logo" className={styles.logo} />
         </Link>
         <div className={`${styles.navMenu} ${isOpen ? styles.active : ""}`}>
           <Link href="/" className={styles.navItem} onClick={closeMenu}>

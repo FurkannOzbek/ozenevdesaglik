@@ -25,7 +25,7 @@ export const Footer = () => {
     <footer className={styles.footerContainer}>
       <div className={styles.footerContent}>
         <div className={styles.footerLogo}>
-          <img src="/images/logo2.png" alt="Logo" className={styles.footerLogoImage} />
+          <img src="/images/logo3.png" alt="Logo" className={styles.footerLogoImage} />
         </div>
         <div className={styles.footerLinks}>
           <Link href="/hakkimizda" className={styles.footerLink}>

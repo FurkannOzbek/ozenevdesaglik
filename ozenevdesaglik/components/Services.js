@@ -69,10 +69,10 @@ const services = [
     icon: "/icons/stitches.png",
   },
   {
-    title: "Glutanyon",
+    title: "Ambulans Hizmeti",
     description:
-      " Evinizde, bağışıklığınızı güçlendirmek ve vücut direncinizi artırmak için glutatyon tedavisi sunuyoruz. Uzman ekibimiz, işlemi güvenli ve hijyenik koşullarda gerçekleştiriyor.",
-    icon: "/icons/radiant.png",
+      " Acil durumlar için evinizden sağlık kuruluşlarına hızlı ve güvenli ulaşım sağlıyoruz. Uzman ekibimiz ve tam donanımlı ambulanslarımızla 7/24 yanınızdayız.",
+    icon: "/icons/ambulance.png",
   },
   {
     title: "Sülük Tedavisi",
