@@ -7,6 +7,12 @@
   background-color: #f8f9fa;
 }
 
+.navLogo:focus,
+.navLogo:active {
+  outline: none; /* Removes the blue outline */
+  box-shadow: none; /* Removes any default box shadow */
+}
+
 .logo {
   height: 170px; /* Adjust the size of the logo for better fit */
   margin-right: 20px; /* Space between the logo and the menu */

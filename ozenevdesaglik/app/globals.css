@@ -10,6 +10,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   background-color: #ffffff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   /* Ensure overflow is set to auto */
 
