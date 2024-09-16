@@ -28,6 +28,7 @@
 
 .navItem {
   color: black;
+  font-weight: 500;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
