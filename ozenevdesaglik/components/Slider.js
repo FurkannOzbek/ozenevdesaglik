@@ -22,7 +22,7 @@ const texts = [
     "Sülük",
     "Evde Hasta Bakım Hizmeti",
   ],
-  ["Ambulans Hizmetimiz", "Temizlik ve Sterilizasyon Anlayışımız", "7/24 Hizmet"],
+  ["7/24 Ambulans Hizmeti"],
 ];
 
 export const Slider = () => {
