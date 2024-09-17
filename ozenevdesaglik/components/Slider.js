@@ -6,7 +6,7 @@ const images = [
   "/images/slide22.jpg",
   "/images/slide4.jpeg",
   "/images/slide5.jpeg",
-  "/images/slide6.jpeg",
+
   "/images/slide7.jpeg",
 ];
 
@@ -22,12 +22,7 @@ const texts = [
     "Sülük",
     "Evde Hasta Bakım Hizmeti",
   ],
-  [
-    "Danışman Doktorlarımız",
-    "Temizlik ve Sterilizasyon Anlayışımız",
-    "7/24 Hizmet",
-    "Ekip Yapımız ve İş Anlayışımız",
-  ],
+  ["Ambulans Hizmetimiz", "Temizlik ve Sterilizasyon Anlayışımız", "7/24 Hizmet"],
 ];
 
 export const Slider = () => {
@@ -96,7 +91,7 @@ export const Slider = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "contain", // Change to contain to fit images within the container
-                objectPosition: "center top", // Center the image within the view
+                objectPosition: "center", // Center the image within the view
                 transition: "opacity 0.8s ease-in-out",
                 opacity: isTransitioning ? 0 : 1,
                 zIndex: isTransitioning ? 1 : 2,

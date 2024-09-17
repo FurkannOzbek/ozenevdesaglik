@@ -59,6 +59,7 @@
   padding: 0;
   text-align: left;
   color: white;
+  position: relative;
 }
 .bulletPoints.textStyle0 li {
   color: white; /* Example color for texts[0] */
@@ -72,14 +73,19 @@
   left: 200%;
 }
 .bulletPoints.textStyle1 li {
-  color: white; /* Example color for texts[0] */
-  animation: fadeIn 0.5s forwards; /* Add your animation styles */
-  position: relative; /* Required for positioning pseudo-elements */
-  margin: 0.5rem 0;
-  padding-left: 30px; /* Space for the indicator */
-  opacity: 0; /* Initially hidden */
-  transform: translateY(-20px); /* Start above the viewport */
-  animation: slideIn 1s forwards; /* Animation for text slide in */
+  color: white; /* Maintain the text color */
+  animation: fadeIn 0.5s forwards; /* Keep the fade-in animation */
+  position: relative; /* Positioning within its container */
+  margin: 0.5rem 0; /* Space between bullet points */
+  padding-left: 30px; /* Space for bullet point indicators */
+  opacity: 0; /* Initially hidden for animation */
+  transform: translateY(-20px); /* Initial animation start position */
+  animation: slideIn 1s forwards; /* Slide-in animation */
+
+  /* New position adjustments for the second slide */
+  left: 10%; /* Example: Move text 10% from the left */
+  bottom: 10%; /* Example: Position text 10% from the bottom */
+  text-align: left; /* Align text to the left, adjust as needed */
 }
 
 .bulletPoints li::before {
@@ -191,7 +197,7 @@
     left: 20%;
   }
   .bulletPoints.textStyle1 li {
-    color: rgb(6, 160, 18); /* Example color for texts[1] */
+    color: rgb(252, 252, 252); /* Example color for texts[1] */
     animation: fadeIn 0.5s forwards; /* Add your animation styles */
     font-weight: 800;
     position: relative; /* Required for positioning pseudo-elements */
@@ -200,7 +206,7 @@
     opacity: 0; /* Initially hidden */
     transform: translateY(-20px); /* Start above the viewport */
     animation: slideIn 1s forwards; /* Animation for text slide in */
-    right: 90%;
+    left: -120%;
   }
   .bulletPoints li::before {
     display: none;
@@ -222,10 +228,11 @@
     opacity: 0; /* Initially hidden */
     transform: translateY(-20px); /* Start above the viewport */
     animation: slideIn 1s forwards; /* Animation for text slide in */
-    left: -50%;
+    left: -70%;
+    bottom: -70px;
   }
   .bulletPoints.textStyle1 li {
-    color: rgb(1, 146, 25); /* Example color for texts[1] */
+    color: rgb(255, 255, 255); /* Example color for texts[1] */
     animation: fadeIn 0.5s forwards; /* Add your animation styles */
     font-weight: 800;
     position: relative; /* Required for positioning pseudo-elements */
@@ -234,7 +241,7 @@
     opacity: 0; /* Initially hidden */
     transform: translateY(-20px); /* Start above the viewport */
     animation: slideIn 1s forwards; /* Animation for text slide in */
-    right: 70%;
+    left: -90%;
     bottom: -150px;
   }
 }
@@ -303,7 +310,7 @@
     left: -15%;
   }
   .bulletPoints.textStyle1 li {
-    color: rgb(3, 110, 36); /* Example color for texts[1] */
+    color: rgb(255, 255, 255); /* Example color for texts[1] */
     animation: fadeIn 0.5s forwards; /* Add your animation styles */
     font-weight: 800;
     position: relative; /* Required for positioning pseudo-elements */
@@ -312,7 +319,8 @@
     opacity: 0; /* Initially hidden */
     transform: translateY(-20px); /* Start above the viewport */
     animation: slideIn 1s forwards; /* Animation for text slide in */
-    right: 80%;
+    left: -80%;
+    bottom: -160px;
   }
   .bulletPoints li::before {
     display: none;
@@ -345,7 +353,7 @@
   }
 
   .bulletPoints.textStyle1 li {
-    color: rgb(3, 110, 36); /* Example color for texts[1] */
+    color: rgb(255, 255, 255); /* Example color for texts[1] */
     animation: fadeIn 0.5s forwards; /* Add your animation styles */
     font-weight: 800;
     position: relative; /* Required for positioning pseudo-elements */
@@ -354,8 +362,8 @@
     opacity: 0; /* Initially hidden */
     transform: translateY(-20px); /* Start above the viewport */
     animation: slideIn 1s forwards; /* Animation for text slide in */
-    left: 0%;
-    bottom: 5%;
+    left: 10%;
+    bottom: 475px;
   }
 
   .prev,
