@@ -14,11 +14,11 @@ export const Contact = () => {
         <div className={styles.contactInfo}>
           <div className={styles.contactItem}>
             <FiPhone size={24} className={styles.contactIcon} />
-            <span className={styles.contactText}>+90 123 456 78 90</span>
+            <span className={styles.contactText}>0542 205 3343</span>
           </div>
           <div className={styles.contactItem}>
             <Link
-              href="https://wa.me/901234567890" // Replace with your WhatsApp number
+              href="https://wa.me/905422053343" // Replace with your WhatsApp number
               className={styles.whatsappLink}
               target="_blank" // Open link in new tab
               rel="noopener noreferrer" // Security measure
