@@ -18,6 +18,15 @@ const openSans = Open_Sans({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={openSans.className}>
+      <head>
+        <title> Mediport Sağlık Hizmetleri</title>
+        <meta
+          name="description"
+          content="Evinizde sağlık hizmeti hiç olmadığı kadar kolay"
+          key="desc"
+        />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body>{children}</body>
       <GoogleAnalytics gaId="AW-16707157786" />
     </html>
