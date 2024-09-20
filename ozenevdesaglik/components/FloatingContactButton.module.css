@@ -1,0 +1,128 @@
+.floatingButtonContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Gap between the main button and bubbles */
+}
+
+.mainButton {
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 60px; /* Standard bubble size */
+  height: 60px; /* Standard bubble size */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Keep the main button in its original position */
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+.mainButton.open:hover {
+  background-color: #0056b3;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.chatIcon {
+  animation: toChat 0.3s forwards;
+}
+
+.mainButton.open .chatIcon {
+  animation: toX 0.3s forwards;
+}
+
+.closeIcon {
+  animation: toX 0.3s forwards;
+}
+
+.mainButton:not(.open) .closeIcon {
+  animation: toChat 0.3s forwards;
+}
+
+/* Bubble styling (aligned with the main button) */
+.bubble {
+  width: 60px; /* Same size as main button */
+  height: 60px; /* Same size as main button */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366; /* Default bubble color */
+  color: white;
+  font-size: 24px; /* Consistent icon size */
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0px; /* Align horizontally with the main button */
+  opacity: 0; /* Hidden by default */
+  pointer-events: none; /* Not clickable by default */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transitions */
+}
+
+.bubble.expand {
+  opacity: 1; /* Ensure bubble is visible when expanded */
+  pointer-events: auto; /* Make clickable when expanded */
+}
+
+.bubble.collapse {
+  opacity: 0; /* Hidden when collapsed */
+  pointer-events: none; /* Disable click during collapse */
+}
+
+/* Phone bubble specific styles */
+.phoneBubble {
+  background-color: #34b7f1; /* Specific color for the phone bubble */
+}
+
+.phoneBubble.expand {
+  transform: translateY(-80px); /* Move up for expansion */
+}
+
+.phoneBubble.collapse {
+  transform: translateY(0); /* Return to original position */
+}
+
+/* WhatsApp bubble specific styles */
+.whatsappBubble {
+  background-color: #25d366; /* Specific color for the WhatsApp bubble */
+}
+
+.whatsappBubble.expand {
+  transform: translateY(-150px); /* Move up for expansion */
+}
+
+.whatsappBubble.collapse {
+  transform: translateY(0); /* Return to original position */
+}
+
+/* Instagram bubble specific styles */
+.instagramBubble {
+  background-color: #c13584; /* Specific color for the Instagram bubble */
+}
+
+.instagramBubble.expand {
+  transform: translateY(-220px); /* Move up for expansion */
+}
+
+.instagramBubble.collapse {
+  transform: translateY(0); /* Return to original position */
+}

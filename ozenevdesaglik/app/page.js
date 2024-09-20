@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Slider } from "@/components/Slider";
 import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
+import FloatingContactButton from "@/components/FloatingContactButton";
 
 const Home = () => {
   const [parallaxStrength, setParallaxStrength] = useState(1600); // Default strength
@@ -54,6 +55,7 @@ const Home = () => {
         <div style={{ height: "400px" }}></div> {/* Adjust height to fit your design needs */}
       </Parallax>
       <Footer />
+      <FloatingContactButton />
     </>
   );
 };
