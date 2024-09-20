@@ -363,7 +363,7 @@
     transform: translateY(-20px); /* Start above the viewport */
     animation: slideIn 1s forwards; /* Animation for text slide in */
     left: 10%;
-    bottom: 500px;
+    bottom: 700px;
   }
 
   .prev,

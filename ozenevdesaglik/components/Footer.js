@@ -42,10 +42,10 @@ export const Footer = () => {
           <a href="#" className={styles.socialIcon} onClick={handleIconClick}>
             <FaFacebook size={20} />
           </a>
-          <a href="#" className={styles.socialIcon} onClick={handleIconClick}>
+          <a href="https://wa.me/905422053343" className={styles.socialIcon}>
             <FaWhatsapp size={20} />
           </a>
-          <a href="#" className={styles.socialIcon} onClick={handleIconClick}>
+          <a href="https://instagram.com/mediportsaglik" className={styles.socialIcon}>
             <FaInstagram size={20} />
           </a>
         </div>
